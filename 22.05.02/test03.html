@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid brown;
+        }
+        tr, td, th {
+            border: 1px dotted burlywood;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function writeFunc() {
+            var form = document.writeForm;
+            if(form.subject.value=="") {
+                alert("제목을 입력하세요");
+                form.subject.focus();
+                return ;
+            } else if(form.content.value=="") {
+                alert("내용을 입력하세요");
+                form.content.focus();
+                return;
+            } else if (form.file.value=="") {
+                alert("파일을 입력하세요");
+                form.file.focus();
+            }
+            form.subject();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>게시글 작성 폼</h1>
+    <hr>
+    <form name="writeForm" method="get" action="test01.html">
+        <table>
+            <tr>
+                <th><label for="subject">제목</label></th>
+                <td><input type="text" size="50" id="subject" name="subject"> </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="content">내용</label>
+                </th>
+                <th>
+                    <textarea name="content" id="" cols="50" rows="20"></textarea>
+                </th>
+                <tr>
+                    <th><label for="file"></label></th>
+                    <td><input type="file" name="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" value="글 입력"  onclick="writeFunc()">
+                    <input type="reset" value="글 취소"></td>
+                </tr>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
