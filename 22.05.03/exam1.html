@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>visibility 프로퍼티</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: right;
+            margin: 10px;
+        }
+
+        .cat {
+            border: 2px solid black;
+            width: 700px;
+            height: 500px;
+        }
+
+        .cat1 {
+            border-radius: 50%;
+            width: 330px;
+            float: left;
+        }
+
+        .cat2 {
+            border-radius: 50%;
+            float: left;
+        }
+
+        .container {
+            width: 170px;
+            height: 320px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px black;
+            padding: 15px 30px;
+            text-align: center;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            margin-left: 35px;
+            background-color: gray;
+        }
+
+        .div {
+            background-color: gray;
+            display: inline-block;
+            width: 300px;
+            height: 180px;
+            
+        }
+
+        .input {
+            background-color: white;
+            width: 200px;
+            padding: 0%;
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+        }
+       .button {
+           display: inline-block;
+           width: 300px;
+           height: 50px;
+           background-color: blanchedalmond;
+           border-radius: 10px;
+           margin-left: 55px;
+           margin-top: 15px;
+           
+       }
+       .button:hover {
+           background-color:burlywood
+       }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hidden").click(function () {
+                $("span").css("visibility", "hidden");
+            });
+        });
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("span").css("visibility", "visible");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+
+    <h3>연습문제3</h3>
+   
+    <hr>
+<div style="border: 2px solid black; width: 400px; height: 150px; float: right; background-color:burlywood;">
+    <input type="button" id="hidden" value="숨기기" class="button">
+
+    <input type="button" id="show" value="보이기" class="button"> <br> <br>
+</div>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>문제 및 정답</th>
+        </tr>
+        <tr>
+            <td colspan="2">01 다음 빈칸에 알맞은 단어를 넣으시오.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>(<span>박스속성</span>)에는 margin 속성, border 속성, padding 속성, width 속성, height 속성이 포함됩니다</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>테두리 두께는 (<span>border-width</span>)으로 입력하고, 테두리 형태는(<span>border-style 속성</span>)으로 입력하며, 테두리 색상은
+                (<span>border-color 속성</span>)으로 입력합니다.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>(<span>border-radius 속성</span>)을 사용하면 박스의 테두리를 둥글게 만들 수 있습니다.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>(<span>display 속성</span>)에 none 키워드를 적용하면 태그가 화면에서 보이지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>background-(<span>image </span>)속성은 배경 이미지를 넣을 때 사용합니다.</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>background-(<span>size</span>)속성은 배경 이미지 크기를 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>background-(<span>repeat</span>)속성은 배경 이미지 반복 형태를 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>background-(<span>attachment</span>)속성은 배경 이미지를 화면에 고정합니다</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>background-(<span>positio</span>)속성은 배경 이미지의 배치를 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>font-(<span>size </span>)속성은 글자 크기를 지정합니다</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>font-(<span>family</span>)속성은 글꼴을 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>(<span> Serif</span>)글꼴(명조체)은 모서리가 뾰족한 글자를 의미합니다</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>(<span> Sans-serif</span>)글꼴(고딕체)은 모서리가 네모진 글자를 의미합니다. </td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>font-(<span>style</span>)속성은 글자 스타일(기울기 등)을 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>font-(<span>weight</span>)속성은 글자 두께를 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>(<span>text-align </span>)속성은 글자 정렬을 지정합니다. </td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>(<span>line-height </span>)속성은 글자 높이를 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>(<span>position</span>)속성은 요소의 위치 지정 형식을 설정할 때 사용합니다.</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>(<span>overflow </span>)속성은 내용이 요소 크기를 벗어나 모두 보여 주기 힘들 때 어떻게 보여 줄지를 지정합니다.</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>(<span>box-shadow</span>)속성은 박스에 그림자를 부여합니다.</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>(<span>text-shadow</span>)속속성은 글자에 그림자를 부여합니다.</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>문제 및 정답</th>
+        </tr>
+        <tr>
+            <td colspan="2">다 음 질문에 OX를 표시하시오</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>inline 형식의 태그에는 width 속성과 height 속성이 적용되지 않으며, margin 속성과 padding 속성은 좌우로만 적용됩니다(<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>inline-block 형식의 태그는 width 속성과 height 속성이 지정되며, margin 속성과 padding 속성이 상하좌우로 적용됩니다(<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>block 형식의 태그는 width 속성과 height 속성이 지정되며, margin 속성과 padding 속성이 상하좌우로 적용됩니다. (<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>background-image 속성에는 이미지를 하나만 지정할 수 있습니다(<span>X</span>)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>font-family 속성에 글꼴을 여러 개 지정하는 것은 아무런 의미가 없습니다. (<span>X</span>)</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>일반적으로 웹 브라우저의 글자 기본 크기는 16px입니다. (<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>기본적인 글꼴 두께 값은 400입니다. (<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>inline 형식의 태그에는 text-align 속성을 지정해도 의미가 없습니다. (<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>요소들은 기본적으로 절대 좌표계를 사용합니다. (<span>X</span>)</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>z-index 속성의 숫자가 클수록 앞에 위치합니다. (<span>O</span>)</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>overflow 속성을 hidden으로 지정하면 영역을 넘은 부분을 보이지 않게 만듭니다. 이 때 스크롤을 사용해 보이지 않게 된 부분을 볼 수 있습니다. (<span>X</span>)
+            </td>
+        </tr>
+    </table> <br>
+    <table border="1">
+        <tr>
+            <th> 03 다 음 중 CSS에서 사용할 수 없는 크기 단위는?</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li> ① cm
+                        ② m
+                        ③ em
+                        ④ px </li>
+                </ul>
+            </td>
+            <th>(<span>3</span>)</th>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th> 04 다 음 속성 중 글자 색상을 지정하는 속성은?</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li> ① font-color
+                        ② text-color
+                        ③ color
+                        ④ background-color </li>
+                </ul>
+            </td>
+            <th>(<span>4</span>)</th>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th> 05 다음 속성 중 박스와 관련한 속성이 아닌 것은?</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li> ① border
+                        ② margin
+                        ③ padding
+                        ④ direction</li>
+                </ul>
+            </td>
+            <th>(<span>5</span>)</th>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th> 06 다음 중 배경 이미지로 background.png를 올바르게 지정한 것은?</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li> ① background: url(‘background.png’)
+                    <li>
+                    <li> ② background: image(‘background.png’) </li>
+                    <li> ③ background: png(‘background’) </li>
+                    <li> ④ background: background as png</li>
+                </ul>
+            </td>
+            <th>(<span>1</span>)</th>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th> 07 다음 중 position 속성을 absolute로 지정한 절대 좌표계에서 위치를 지정할 때 사용하는 속성 이 아닌 것은?</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li> ① top
+                        ② lower
+                        ③ left
+                        ④ right</li>
+                </ul>
+            </td>
+            <th>(<span>2</span>)</th>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th> 08 다음 스타일이 적용되는 태그 너비를 구하시오.</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li>.box { width: 100px; height: 100px; margin: 0 20px; </li>
+                    <li> padding:10px 0px; border:5px soild black; } </li>
+                </ul>
+            </td>
+            <th>(<span>width: 150px , height: 130px</span>)</th>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <th> 09 다 음 코드와 같이 background-image 속성을 적용했을 때, 이미지 A와 이미지 B 중 어떤 이 미지가 위쪽에 위치하는가?</th>
+            <th>정답</th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style: none;">
+                    <li>&lt;style&gt; body { </li>
+                    <li> background: 이미지A, 이미지B;</li>
+                    <li> } </li>
+                    <li>&lt;style&gt;</li>
+                </ul>
+            </td>
+            <th>(<span>이미지 A가 위쪽으로 온다</span>)</th>
+        </tr>
+    </table>
+  
+
+    <table border="1">
+        <tr>
+            <td>10 다음 코드의 실행 결과를 그리시오.</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="box">
+                    <h1>1</h1>
+                </div>
+                <div class="box">
+                    <h1>2</h1>
+                </div>
+                <div class="box">
+                    <h1>3</h1>
+                </div>
+            </td>
+        </tr>
+        </table>
+        <h3>11 다음과 같이 HTML을 구성하고 스타일을 적용하시오</h3>
+    <div class="div">
+        <h1>간단한 입력 양식 </h1>
+        <table class="table">
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" class="input"></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="text" class="input"></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="제출" class="input"></td>
+            </tr>
+
+        </table>
+    </div>
+
+
+        <h3>12 다음과 같이 HTML을 구성하고 스타일을 적용하시오.</h3> <br>
+
+        <form class="cat">
+            <img src="cat1.jpg" alt="cat" class="cat1">
+            <p> Loren ipsum dolor sit amet, consectetur adipiscing elit. Duis sem ligula, volutpat in condimentumet,
+                hendrerit sit amet nisi. Proin a metus dignissim, porta ipsum sed, porta mi.
+                pellentesque tempor vitae velit ut laoreet.
+                Pellentesque tincidunt, dui nec suscipit ornare, elit turpis mattis velit, et ruturum justo
+                lacus sed lorem. Vestibulum non ipsum varius, ,mattos lorem at, consequat mi.
+                Suspendisse non vulputate nibh, ut pellentesque quam.
+                Fusce vehicula vel lorm ut interdum
+                Nullam porttitor massa eget tinicidunt tempor </p> <br>
+            <img src="cat2.jpg" alt="cat" class="cat2">
+            <p> Sed dignissim tortor id enim imperdiet,
+                nec viverra sapien vehicula. Curabitur at euismod sapien. Vivamus at consequat sapien. Nulla non mi eget
+                purus viverra finibus. Nunc sapien nunc,
+                faucibus vitae dui accumsan, ultrices ultricies orci. Proin volutpat tempor lacus, vel finibus urna
+                ultricies in. Aenean aliquet tristique ligula sed fermentum.
+                In ut odio at leo convallis fermentum. Praesent vel volutpat erat, sed porttitor massa. Aliquam nec nibh
+                purus.
+            </p>
+        </form>
+        <h3>다음과 같이 HTML을 구성하고 스타일을 적용하시오.</h3>
+        <div class="container">
+            <h3>Card</h3>
+            <div class="box1"></div>
+            <div class="text1">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis sem ligula, volutpat in condimentum et, hendrerit sit amet nisi.
+                </p>
+            </div>
+        </div>
+
+</body>
+
+</html>
