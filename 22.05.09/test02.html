@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var jumsu_ = prompt("점수를 입력하세요.");
+        var jumsu = parseInt(jumsu_);
+        var grade = null;
+        if(jumsu <=100 && jumsu>=90) {
+            grade = "A 등급";
+        } else if (jumsu >=80 && jumsu < 90) {
+            grade = "B 등급";
+        } else if (jumsu >=70 && jumsu < 80) {
+            grade = "C 등급";
+        } else if (jumsu >=60 && jumsu < 70 ) {
+            grade = "D 등급";
+        } else if (jumsu <60 && jumsu>=0) {
+            grade = "F 등급";
+        } else {
+            grade = "점수는 0~100까지 숫자를 입력하세요.";
+        }
+        alert(grade);
+    </script>
+</body>
+</html>
