@@ -1,0 +1,10 @@
+header {
+    height: 810px;
+    background-color: orange;
+}
+.header_img1 {
+    display: inline-block;
+}
+.header_img2 {
+    display: inline-block;
+}
